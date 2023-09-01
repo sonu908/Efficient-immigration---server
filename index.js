@@ -7,8 +7,7 @@ const app = express();
 app.use(bodyParser.json());
 
 const allowedOrigins = [
-  "http://127.0.0.1:5173", // Replace with the actual origin of your frontend
-  // Add other origins as needed
+  "http://127.0.0.1:5173",
 ];
 
 const corsOptions = {
@@ -23,11 +22,10 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 
-// Create a Nodemailer transporter
 const smtpConfig = {
-  host: "smtp.gmail.com", // Replace with your SMTP server's hostname or IP address
-  port: 465, // Use the appropriate port for your SMTP server (e.g., 465 for SSL)
-  secure: true, // Set to true if using SSL, false for other ports
+  host: "smtp.gmail.com", 
+  port: 465, 
+  secure: true, 
   auth: {
     user: "effizientimmigrationtest@gmail.com",
     pass: "cgznhiqjjfwctkxg",
